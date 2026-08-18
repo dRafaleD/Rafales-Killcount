@@ -1,0 +1,4 @@
+name=KillCount Knox Hostiles
+id=KillCountKnoxHostiles
+description=Adds a lightweight kill counter HUD for Build 42.20 Stable that tracks zombie kills and hostile Knox-style NPC kills.
+require=Base
