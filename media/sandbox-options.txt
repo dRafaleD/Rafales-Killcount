@@ -1,0 +1,8 @@
+VERSION = 1,
+
+option RafalesKillcount.EnableRankEffects = {
+    type = boolean,
+    default = true,
+    page = RafalesKillcount,
+    translation = RafalesKillcount_EnableRankEffects,
+}

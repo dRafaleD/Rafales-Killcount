@@ -1,53 +1,83 @@
-# KillCount Knox Hostiles
+# Rafales Killcount
 
-Project Zomboid Build 42.20 Stable icin baslangic modu.
+Track the story of your survivor in **Project Zomboid Build 42.20**.
 
-Bu mod su an:
+Rafales Killcount separates the dead from the living threats of Knox County: regular zombie kills are tracked independently from hostile Knox Survivor kills, and both paths feed into their own progression ranks.
 
-- Vanilla `player:getZombieKills()` verisini HUD'da gosterir.
-- `OnCharacterDeath` uzerinden olen karakteri kontrol edip hostile NPC oldurmesini sayar.
-- `K` tusu ile HUD ac/kapat yapar.
+![Rafales Killcount](workshop-cover.png)
 
-## Klasor yapisi
+## Features
 
-Bu klasoru workshop/paketleme oncesi mod klasoru olarak kullan:
+- Adds `Hostile Survivors Killed` to the character **Info** panel.
+- Corrects the vanilla zombie total by excluding Knox Survivor zombie shells.
+- Tracks only Knox Survivors who are hostile to the player at the moment of death.
+- Adds two independent progression systems:
+  - **Undead Rank:** Greenhorn → Hardened → Veteran → Reaper → Cold-Blooded
+  - **Knox Threat Rank:** Unknown → Survivor → Hunter → Warlord → Legend
+- Keeps the interface lightweight with no additional HUD required.
+- Includes an optional rank gameplay effect for the `Cold-Blooded` milestone.
+- Supports single-player and local-host play.
 
-- `mod.info`
-- `media/lua/shared`
-- `media/lua/client`
+## Rank progression
 
-## Nasil calisiyor
+### Undead Rank
 
-Zombie sayisi Build 42'nin kendi kill sayacindan okunur; bu yuzden zombie oldurmelerinde ek hook'a ihtiyac yok.
+| Zombie kills | Rank |
+| ---: | --- |
+| 0–299 | Greenhorn |
+| 300–599 | Hardened |
+| 600–899 | Veteran |
+| 900–1,499 | Reaper |
+| 1,500+ | Cold-Blooded |
 
-Hostile NPC sayisi ise su mantikla bulunur:
+At **Cold-Blooded**, the player's panic is repeatedly reset while a real zombie is within 12 tiles. Knox Survivors and other panic sources are not affected.
 
-1. Olen sey zombie degilse
-2. Player degilse
-3. `modData` veya method tarafinda `hostile/aggressive/enemy` benzeri bir isaret tasiyorsa
-4. Ve olduren local player ise
+### Knox Threat Rank
 
-sayac `hostileNpcKills` olarak artar.
+| Hostile survivor kills | Rank |
+| ---: | --- |
+| 0–19 | Unknown |
+| 20–29 | Survivor |
+| 30–99 | Hunter |
+| 100–149 | Warlord |
+| 150+ | Legend |
 
-## Knox Survivors / Knox Event icin not
+## Requirements
 
-Bu repo icindeki tespit mantigi esnek yazildi ama `Knox Survivors` tarafindaki gercek class, method veya `modData` alanlarini gormeden %100 kesin baglanti diyemem.
+- Project Zomboid **Build 42.20 Stable**
+- [Knox Survivors](https://steamcommunity.com/sharedfiles/filedetails/?id=3749727604)
 
-En iyi bir sonraki adim:
+Knox Survivors is required because this mod uses its relationship data to identify hostile survivors.
 
-- Sen bana Knox modunun ilgili Lua dosyalarini ver
-- Ben hostile flag'i tam dogru alanlara baglayayim
-- Gerekirse oldureni `getAttackedBy()` disinda modun kendi combat kaydindan cekelim
+## Installation
 
-## Kurulum
+### Steam Workshop
 
-1. Modu `Zomboid/mods/KillCountKnoxHostiles` altina koy.
-2. Oyunda modu aktif et.
-3. Yeni veya mevcut save'de gir.
-4. `K` ile HUD gorunurlugunu degistir.
+Subscribe to the [Rafales Killcount Workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=3786908400) and enable it together with **Knox Survivors** before starting or loading a game.
 
-## Su anki sinirlar
+### Manual / development install
 
-- SP / local host odakli yazildi.
-- Knox tarafi farkli hostile flag isimleri kullaniyorsa NPC kill'i saymayabilir.
-- Vehicle veya dolayli oldurmelerde `killer` tespiti modun implementasyonuna gore ek duzeltme isteyebilir.
+Copy the `42.20` folder into your local Project Zomboid mod directory so the structure looks like this:
+
+```text
+RafalesKillcount/
+└── 42.20/
+    ├── mod.info
+    └── media/
+```
+
+## Important notes
+
+- Tracking begins after the mod is enabled. Earlier Knox Survivor shell kills cannot be separated from the existing vanilla zombie total.
+- Direct player kills are detected through the victim's attacker/last-hit information. Vehicle, fire and other indirect kills may require additional in-game testing.
+- The mod does not redistribute Knox Survivors files or code.
+
+## Credits
+
+Thanks to **.exe**, creator of Knox Survivors, for the support and permission to reference its API structure.
+
+Created by [Rafale](https://github.com/dRafaleD).
+
+## License
+
+This project is provided for use with Project Zomboid. Please do not redistribute Knox Survivors code or assets.

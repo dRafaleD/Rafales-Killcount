@@ -1,0 +1,54 @@
+[h1]Rafales Killcount[/h1]
+
+[b]Build 42.20 | Zombies // Hostile Survivors[/b]
+
+The Knox Event changed everything. Every street, house and survivor can become part of your story — and every kill should count.
+
+Rafales Killcount turns your survival experience into a clear progression journey. Keep your fight against the undead separate from your battles with hostile Knox Survivors, watch your reputation grow, and see your character evolve from an untested Greenhorn into a Cold-Blooded Legend.
+
+All progress is shown directly in the character Info panel, so you can follow your legacy without adding another HUD element or cluttering your screen.
+
+[h2]What does it add?[/h2]
+[list]
+[*][b]Separate kill tracking:[/b] Zombie kills and hostile survivor kills are recorded independently.
+[*][b]Accurate zombie count:[/b] Knox Survivor zombie shells are removed from the vanilla zombie total.
+[*][b]Undead Rank:[/b] Progress through Greenhorn, Hardened, Veteran, Reaper and Cold-Blooded.
+[*][b]Knox Threat Rank:[/b] Build your reputation from Unknown to Survivor, Hunter, Warlord and Legend.
+[*][b]Hostile-only survivor count:[/b] Only Knox Survivors hostile to your player are counted.
+[*][b]Character Info integration:[/b] Everything is visible in the familiar Info panel — no separate HUD required.
+[/list]
+
+[h2]Undead Rank[/h2]
+[list]
+[*][b]0 - 299:[/b] Greenhorn - Learning to survive
+[*][b]300 - 599:[/b] Hardened - Seasoned survivor
+[*][b]600 - 899:[/b] Veteran - Battle-tested
+[*][b]900 - 1499:[/b] Reaper - The dead know your name
+[*][b][color=#d9a441]1500+:[/color][/b] [color=#d9a441]Cold-Blooded[/color] - While a real zombie is within 12 tiles, the player's panic value is repeatedly reset to 0.
+[/list]
+
+[h2]Knox Threat Rank[/h2]
+[list]
+[*][b]0 - 19:[/b] Unknown
+[*][b]20 - 29:[/b] Survivor
+[*][b]30 - 99:[/b] Hunter
+[*][b]100 - 149:[/b] Warlord
+[*][b][color=#d9a441]150+:[/color][/b] [color=#d9a441]Legend[/color]
+[/list]
+
+[h2]Visual Only Option[/h2]
+Want the ranks without changing gameplay balance? In Sandbox Options, open [b]Rafales Killcount - Gameplay Effects[/b] and disable [b]Enable Rank Gameplay Effects[/b].
+
+The kill counters and all ranks remain visible. Gameplay effects, including the Cold-Blooded panic effect, are disabled.
+
+[h2]Requirements[/h2]
+[list]
+[*]Project Zomboid Build 42.20
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3749727604]Knox Survivors[/url]
+[/list]
+
+[h2]Credits[/h2]
+Thanks to [b].exe[/b], creator of Knox Survivors, for the support and permission.
+
+[h2]Links[/h2]
+[url=https://github.com/dRafaleD]GitHub - dRafaleD[/url]

@@ -1,0 +1,5 @@
+{
+    "Sandbox_RafalesKillcount": "Rafales Killcount - Gameplay Effects",
+    "Sandbox_RafalesKillcount_EnableRankEffects": "Enable Rank Gameplay Effects",
+    "Sandbox_RafalesKillcount_EnableRankEffects_tooltip": "When disabled, kill counts and ranks remain visible but rank-based gameplay effects are disabled. Cold-Blooded will not remove zombie panic."
+}

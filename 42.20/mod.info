@@ -3,3 +3,5 @@ id=RafalesKillcount
 description=Track your survival legacy in Build 42.20. Rafales Killcount separates zombie kills from hostile Knox Survivor kills, adds Undead and Threat ranks to the Character Info panel, and rewards your journey from Greenhorn to Cold-Blooded Legend.
 poster=workshop-cover.png
 require=KnoxSurvivors
+versionMin=42.20
+versionMax=42.20
